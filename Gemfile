@@ -13,6 +13,7 @@ end
 group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
+  gem 'factory_girl_rails', '4.2.0'
 end
 
 group :production do
@@ -20,6 +21,10 @@ group :production do
   gem 'rails_12factor'
 end
 
+
+#gem 'bootstrap-sass', '~> 3.2.0'
+
+gem 'autoprefixer-rails'
 
 # Use SCSS for stylesheets
 #gem 'sass-rails', '~> 4.0.3'

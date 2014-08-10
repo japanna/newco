@@ -1,5 +1,26 @@
 @import "bootstrap";
 
+box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  }
+
 /* universal */
 
 html {
@@ -115,4 +136,74 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 10px;
+}
+
+/* sidebar */
+
+aside section h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+
+aside section {
+    border-top: 1px solid #eaeaea;
+    color: #999;
+    padding: 30px 0;
+
+}
+
+aside span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+/* forms */
+
+.signup_form {
+  color: #555;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
+
+input, textarea, select, .uneditable-input {
+  -moz-border-radius:3px; /* Firefox */
+  -webkit-border-radius: 3px; /* Safari, Chrome */
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+
+}
+
+input {
+  padding: 8px;
+  height: 40px;
+}
+
+#message-box-error {
+border: 1px solid #eed3d7;
+padding: 1.2857142857em 1.7142857143em;
+background: #f2dede;
+border-radius: 3px;
+margin-bottom: 20px;
+color: #b94a48;
+}
+
+#message-box-error ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+
+
+.field_with_errors {
+  
 }
