@@ -172,7 +172,11 @@ aside span {
   color: #555;
   margin-left: auto;
   margin-right: auto;
-  width: 300px;
+  width: 350px;
+}
+
+.signup_form p {
+  margin-top: 20px;
 }
 
 input, textarea, select, .uneditable-input {
