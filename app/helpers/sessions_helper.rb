@@ -24,4 +24,14 @@ module SessionsHelper
       @current_user ||= User.find_by(remember_token: remember_token)
     end
 
+    def sign_out
+    # change the user’s remember token in the database (in case it has been stolen)	
+    current_user.update_attribute(:remember_token,
+                                  User.digest(User.new_remember_token))
+    # remove the remember token from the session
+    cookies.delete(:remember_token)
+    # in case we ever want to use sign_out without a redirect
+    self.current_user = nil
+  end
+
 end
