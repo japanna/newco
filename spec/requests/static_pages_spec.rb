@@ -2,49 +2,33 @@ require 'spec_helper'
 
 describe "Static pages" do
 
-	let(:base_title) { "NewCo" }
+	subject { page }
 
-  describe "Home page" do
-    it "should have the content 'NewCo'" do
-      visit '/static_pages/home'
-      expect(page).to have_content('NewCo')
-    end
-    it "should have the right title" do
-    	visit '/static_pages/home'
-    	expect(page).to have_title("#{base_title} | Home")
-    end
+	describe "Home page" do
+    before { visit root_path }
+
+    it { should have_content('NewCo') }
+    it { should have_title(full_title('')) }
   end
 
-  describe "Help page" do
-    it "should have the content 'Help'" do
-      visit '/static_pages/help'
-      expect(page).to have_content('Help')
-    end
-    it "should have the right title" do
-    	visit '/static_pages/help'
-    	expect(page).to have_title("#{base_title} | Help")
-    end
+  describe "About page" do
+    before { visit about_path }
+
+    it { should have_content('About') }
+    it { should have_title(full_title('About')) }
   end
 
   describe "Menu page" do
-    it "should have the content 'Menu'" do
-      visit '/static_pages/menu'
-      expect(page).to have_content('Menu')
-    end
-   	it "should have the right title" do
-    	visit '/static_pages/menu'
-    	expect(page).to have_title("#{base_title} | Menu")
-    end
+    before { visit menu_path }
+
+    it { should have_content('Menu') }
+    it { should have_title(full_title('Menu')) }
   end
 
   describe "Contact page" do
-    it "should have the content 'Contact'" do
-      visit '/static_pages/contact'
-      expect(page).to have_content('Contact')
-    end
-   	it "should have the right title" do
-    	visit '/static_pages/contact'
-    	expect(page).to have_title("#{base_title} | Contact")
-    end
+    before { visit contact_path }
+
+    it { should have_content('Contact') }
+    it { should have_title(full_title('Contact')) }
   end
 end
