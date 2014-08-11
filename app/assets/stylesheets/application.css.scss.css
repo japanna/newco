@@ -12,8 +12,10 @@
  *
 
  *= require_self
+ *= require 'custom'
  */
 
+/* remember to remove the require tree to avoid "sprocket circular dependency error"*/
  
 @import "bootstrap-sprockets";
 @import "bootstrap";
